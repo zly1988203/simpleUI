@@ -1,0 +1,93 @@
+// mask
+.sui-mask,.sui-popup-mask,.sui-mask-transparent {
+    transition-property: all;
+    transition-duration: .3s;
+    opacity: 0;
+    transform: translateZ(0);
+    display: none;
+}
+
+.sui-mask-visible,.sui-popup-mask-visible {
+    opacity: 1;
+    display: block;
+    transform: translateZ(0);
+}
+
+// dialog
+.sui-dialog {
+    transition-property: all;
+    transition-duration: .2s;
+    opacity: 0;
+    transform: translateZ(0) translate(-50%, -50%) scale(.9);
+    display: none;
+}
+.sui-dialog-visible {
+    opacity: 1;
+    display: block;
+    transform: translateZ(0) translate(-50%, -50%) scale(1);
+}
+
+// actionSheet
+.sui-actionsheet {
+    transition-property: all;
+    transition-duration: .3s;
+    transform: translateZ(0) translateY(100%);
+    backface-visibility:hidden;
+}
+.sui-actionsheet-visible {
+    transform: translateZ(0) translateY(0px);
+}
+
+// toast
+.sui-toast {
+    transition-property: all;
+    transition-duration: .2s;
+    opacity: 0;
+    transform: translateZ(0) scale(.9);
+    display: none;
+}
+.sui-toast-visible {
+    opacity: 1;
+    display: block;
+    transform: translateZ(0) scale(1);   
+}
+.sui-toast-content {
+    transition-duration: .3s;
+    transform: translateZ(0) translate(-50%, 20px);
+}
+.sui-toast-content-visible {
+    opacity: 1;
+    display: block;
+    transform: translateZ(0) translate(-50%, 0px);
+}
+
+// popup
+.sui-popup-container,
+.sui-popup-modal {
+    display: none;
+    transition-property: all;
+    transition-duration: .2s;
+    backface-visibility:hidden;
+}
+.sui-popup-effect-plate {
+    height: auto !important;
+}
+.sui-popup-effect-menu {
+    width: 70% !important;
+    transform: translateZ(0) translateX(-100%);
+}
+.sui-popup-effect-plate,
+.sui-popup-effect-modal {
+    transform: translateZ(0) translateY(100%);
+}
+.sui-popup-effect-push {
+    transform: translateZ(0) translateX(100%);
+}
+.sui-popup-effect-plate-visible,
+.sui-popup-effect-modal-visible {
+    transform: translateZ(0) translateY(0px);
+}
+.sui-popup-effect-push-visible,
+.sui-popup-effect-menu-visible {
+    transform: translateZ(0) translateX(0px);
+}

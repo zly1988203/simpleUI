@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SimpleUI</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link href="../dist/style/simpleui.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    
+   <ul class="sui-list sui-list-link sui-mtb20 sui-border-tb">
+        <li data-href="widget/list/list-1.html">标准</li>
+        <li data-href="widget/list/list-2.html">16px字号</li>
+        <li data-href="widget/list/list-3.html">通栏边框线</li>
+        <li data-href="widget/list/list-4.html">上下边框线 + 上下边距</li>
+        <li data-href="widget/list/list-5.html">左右内容盒子</li>
+        <li data-href="widget/list/list-6.html">链接列表</li>
+        <li data-href="widget/list/list-7.html">带Icon的列表</li>
+        <li data-href="widget/list/list-8.html">居中链接</li>
+    </ul>
+    <script src="../dist/js/zepto.min.js"></script>
+    <script src="../dist/js/simpleui.min.js"></script>
+    <script>
+    $(function() {
+        $('[data-href]').on('click', function() {
+             location.href = $(this).data('href');
+        });
+    });
+    </script>
+</body>
+</html>

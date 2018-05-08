@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SimpleUI</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link href="../dist/style/simpleui.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   <ul class="sui-list sui-list-link sui-mtb20 sui-border-tb">
+        <li id="successTester">Success</li>
+        <li id="errorTester">Error</li>
+        <li id="loadingTester">Loading</li>
+        <li id="initloadingTester">initLoading</li>
+        <li id="textTester">Text</li>
+   </ul>
+    
+    <script src="../dist/js/zepto.min.js"></script>
+    <script src="../dist/js/simpleui.min.js"></script>
+    <script>
+    $(function() {
+        
+        // 成功
+        $('#successTester').on('click', function() {
+            $.toastSuccess();
+        });
+        
+        // 错误
+        $('#errorTester').on('click', function() {
+            $.toastError();
+        });
+        
+        // 加载
+        $('#loadingTester').on('click', function() {
+            $.showLoading();
+            // 3秒自动关闭
+            setTimeout(function() {
+                $.hideLoading();
+            }, 3000);
+        });
+		
+		// 初始化加载 (不透明)
+        $('#initloadingTester').on('click', function() {
+            $.initLoading();
+            // 3秒自动关闭
+            setTimeout(function() {
+                $.hideLoading();
+            }, 30000);
+        });
+        
+        // 纯文本
+        $('#textTester').on('click', function() {
+            $.toast('好用的框架不需要封装太多功能', function() {
+                console.log('aaaa');
+            });
+        });
+    });
+    </script>
+</body>
+</html>

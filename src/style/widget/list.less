@@ -1,0 +1,92 @@
+.sui-list {
+    background-color: white;
+    > li {
+        display: block;
+        padding: 12px 15px 11px 0;
+        font-size: @font-size-default;
+        margin-left: 15px;
+        border-top: @border-line-color 1px solid;
+        &:first-child {
+            border-top: 0;
+            background-image: none;
+        }
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .sui-list > li {
+        background-repeat: repeat-x;
+        -webkit-background-size: 100% 1px;
+        border:0;
+        background-position: left top;
+        background-image: @border-t;
+    }
+}
+
+.sui-list-title, .sui-list-desc {
+    font-size: @font-size-mini;
+    padding: 8px 15px 8px 15px;
+    color: @list-desc-color;
+}
+
+.sui-list-big li {
+    padding: 10px 15px 10px 0;
+    font-size: @font-size-big;
+}
+
+//带链接的list
+.sui-list-link > li, .sui-cell-link {
+    position: relative;
+    padding-right: 30px !important;
+    &:active {
+        background-color: @list-active-color;
+        padding-left: 15px;
+        margin-left: 0;
+    }
+    &:after {
+        .rightArrowLink();
+    }
+}
+
+.sui-list-cover li {
+    margin-left: 0;
+    padding-left: 15px;
+}
+
+//标准cell，一般用来展示数据
+.sui-cell-default {
+    display: flex;
+    dt {
+        .nowrap();
+        flex: 1;
+        color: #000;
+    }
+    dd {
+        max-width: 75%;
+        text-align: right;
+        .nowrap();
+        color:#888;
+    }
+}
+.sui-cell-icons {
+    padding-left: 30px;
+    position: relative;
+    .sui-cell-icon {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -11px;
+        background-size: 22px 22px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.sui-cell-centerlink {
+    text-align: center;
+    &:active {
+        background-color: @list-active-color;
+    }
+}
